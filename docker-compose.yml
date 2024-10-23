@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  php:
+    build: ./php # It builds from folder ./php/Dockerfile
+    container_name: php-app
+    ports:
+      - "8080:80"  # Expose PHP app on port 8080
+    volumes:
+      - ./php:/var/www/html  # Mount the PHP app code to the container
+    depends_on:
+      - mysql  # Ensure MySQL starts before PHP
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d  # Initialize DB with SQL files
+    ports:
+      - "3306:3306"  # Expose MySQL on port 3306
