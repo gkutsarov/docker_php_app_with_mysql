@@ -4,14 +4,14 @@ This repository contains a simple Docker-based setup for a PHP application conne
 
 ## Project Structure
 
-php-mysql-docker-app/
+```php-mysql-docker-app/
 ├── php/                         # Directory for PHP service files
 │   ├── Dockerfile               # Dockerfile to set up PHP our custom Docker image
 │   └── index.php                # Basic PHP app that connects to MySQL
 └── db/                          # Directory for MySQL initialization files
     └── init.sql                 # SQL script to initialize database and add sample data
 ├── docker-compose.yml           # Docker Compose file defining PHP and MySQL services
-
+```
 
 ## Features
 
@@ -77,7 +77,7 @@ ID: 2 - Name: Jane Smith
 - **Docker Compose:** Defines the PHP and MySQL containers.
 - **PHP Dockerfile:** Configures the PHP environment with MySQL support.
 - **PHP Application:** Interacts with MySQL and displays data from a database table.
-- **Database Initialization:** The *init.sql* file creates and populates the *users* table when the MySQL container starts.
+- **Database Initialization:** The **init.sql** file creates and populates the **users** table when the MySQL container starts.
 
 This project serves as an introduction to setting up a PHP/MySQL environment using Docker, providing a practical example for learning about containerization and microservices.
 
