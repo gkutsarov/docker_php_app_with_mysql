@@ -4,7 +4,8 @@ This repository contains a simple Docker-based setup for a PHP application conne
 
 ## Project Structure
 
-```php-mysql-docker-app/
+```
+php-mysql-docker-app/
 ├── php/                         # Directory for PHP service files
 │   ├── Dockerfile               # Dockerfile to set up PHP our custom Docker image
 │   └── index.php                # Basic PHP app that connects to MySQL
