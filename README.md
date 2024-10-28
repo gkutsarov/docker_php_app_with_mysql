@@ -6,15 +6,6 @@ This repository contains a simple Docker-based setup for a PHP application conne
 
 ```
 php-mysql-docker-app/
-├── db/                         # Directory for PHP service files
-├── Dockerfile               # Dockerfile to set up PHP our custom Docker image
-└── index.php                # Basic PHP app that connects to MySQL
-└── db/                          # Directory for MySQL initialization files
-    └── init.sql                 # SQL script to initialize database and add sample data
-├── docker-compose.yml           # Docker Compose file defining PHP and MySQL services
-```
-```
-php-mysql-docker-app/
 └── db/                          # Directory for MySQL initialization files
     └── init.sql                 # SQL script to initialize database and add sample data
 └── php/                         # Directory for PHP service files
